@@ -8,7 +8,7 @@
 (menu-bar-mode t)
 
 ;;; You email address
-(setq user-mail-address "xiaohanyu1988@gmail.com")
+(setq user-mail-address "luoyongmao@gmail.com")
 
 ;;; Calendar settings
 ;; you can use M-x sunrise-sunset to get the sun time
@@ -62,3 +62,18 @@ inversion of gas-comment-region"
           (delete-char 1))
       (next-line))
     (goto-char end)))
+
+(ome-switch-mac-keys)
+
+(setq backup-directory-alist
+      `((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms
+                `((".*" ,temporary-file-directory t)))
+(add-to-list 'default-frame-alist '(height . 50))
+(add-to-list 'default-frame-alist '(width . 120))
+(add-to-list 'default-frame-alist '(top . 180))
+(add-to-list 'default-frame-alist '(left . 400))
+
+(if (member "Input Mono" (font-family-list))
+    (set-face-attribute
+     'default nil :font "Input Mono 13"))

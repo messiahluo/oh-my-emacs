@@ -76,7 +76,7 @@ off evil-mode globally, which means, evil-mode will be turned off for the whole
 Emacs session.
 
 #+NAME: evil
-#+BEGIN_SRC emacs-lisp
+#+BEGIN_SRC emacs-lisp :tangle no
 (defun ome-evil-setup ()
   (define-key evil-insert-state-map (kbd "C-[") 'evil-force-normal-state)
   (setq evil-auto-indent t)
@@ -122,7 +122,7 @@ I also bind some keys to [[https://github.com/syohex/emacs-git-gutter][git-gutte
 editing your document at your fingertips.
 
 #+NAME: evil-leader
-#+BEGIN_SRC emacs-lisp
+#+BEGIN_SRC emacs-lisp :tangle no
 (defun ome-evil-leader-setup ()
   (evil-leader/set-leader "<SPC>")
   (unless (featurep 'helm)
@@ -191,7 +191,7 @@ between =evil-surround= and =vim-surround=. However, for daily use, they're
 almost the same.
 
 #+NAME: evil-surround
-#+BEGIN_SRC emacs-lisp
+#+BEGIN_SRC emacs-lisp :tangle no
 (ome-install 'evil-surround)
 #+END_SRC
 
