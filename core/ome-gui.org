@@ -136,7 +136,7 @@ theme.
   (ad-enable-advice 'load-theme 'around 'ome-load-theme)
   (ad-activate 'load-theme)
 
-  (load-theme 'solarized-light t))
+  (load-theme 'solarized-dark t))
 
 (ome-install 'solarized-emacs)
 #+END_SRC
