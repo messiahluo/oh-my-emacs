@@ -77,3 +77,5 @@ inversion of gas-comment-region"
 (if (member "Input Mono" (font-family-list))
     (set-face-attribute
      'default nil :font "Input Mono 13"))
+
+(setq python-indent-offset 4)
