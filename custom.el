@@ -77,3 +77,11 @@ inversion of gas-comment-region"
 (if (member "Input Mono" (font-family-list))
     (set-face-attribute
      'default nil :font "Input Mono 13"))
+
+(defun on-after-init ()
+  (unless (display-graphic-p (selected-frame))
+    (set-face-background 'default "unspecified-bg" (selected-frame))))
+
+(add-hook 'window-setup-hook 'on-after-init)
+
+(exec-path-from-shell-copy-env "WORKON_HOME")
