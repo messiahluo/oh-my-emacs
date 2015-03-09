@@ -85,3 +85,4 @@ inversion of gas-comment-region"
 (add-hook 'window-setup-hook 'on-after-init)
 
 (exec-path-from-shell-copy-env "WORKON_HOME")
+(setq python-indent-offset 4)
