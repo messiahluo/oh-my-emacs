@@ -69,10 +69,10 @@ inversion of gas-comment-region"
       `((".*" . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms
                 `((".*" ,temporary-file-directory t)))
-(add-to-list 'default-frame-alist '(height . 50))
-(add-to-list 'default-frame-alist '(width . 120))
-(add-to-list 'default-frame-alist '(top . 180))
-(add-to-list 'default-frame-alist '(left . 400))
+(add-to-list 'default-frame-alist '(height . 60))
+(add-to-list 'default-frame-alist '(width . 160))
+(add-to-list 'default-frame-alist '(top . 0))
+(add-to-list 'default-frame-alist '(left . 300))
 
 (if (member "Input Mono" (font-family-list))
     (set-face-attribute
@@ -86,3 +86,8 @@ inversion of gas-comment-region"
 
 (exec-path-from-shell-copy-env "WORKON_HOME")
 (setq python-indent-offset 4)
+
+(defun kill-other-buffers ()
+  "Kill all other buffers."
+  (interactive)
+  (mapc 'kill-buffer (delq (current-buffer) (buffer-list))))
