@@ -5,7 +5,7 @@
 
 ;; For example, oh-my-emacs disables menu-bar-mode by default. If you want it
 ;; back, just put following code here.
-(menu-bar-mode t)
+(menu-bar-mode -1)
 
 ;;; You email address
 (setq user-mail-address "luoyongmao@gmail.com")
@@ -91,8 +91,8 @@ inversion of gas-comment-region"
       `((".*" . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms
                 `((".*" ,temporary-file-directory t)))
-(add-to-list 'default-frame-alist '(height . 60))
-(add-to-list 'default-frame-alist '(width . 160))
+(add-to-list 'default-frame-alist '(height . 50))
+(add-to-list 'default-frame-alist '(width . 140))
 (add-to-list 'default-frame-alist '(top . 0))
 (add-to-list 'default-frame-alist '(left . 300))
 
@@ -104,9 +104,9 @@ inversion of gas-comment-region"
     (set-face-attribute
      'default nil :font "Essential PragmataPro 13"))
 
-(defun on-after-init ()
-  (unless (display-graphic-p (selected-frame))
-    (set-face-background 'default "unspecified-bg" (selected-frame))))
+ (defun on-after-init ()
+   (unless (display-graphic-p (selected-frame))
+     (set-face-background 'default "unspecified-bg" (selected-frame))))
 
 (add-hook 'window-setup-hook 'on-after-init)
 
